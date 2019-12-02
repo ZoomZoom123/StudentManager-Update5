@@ -97,24 +97,19 @@ namespace StudentManager
 
     public class Member
     {
-        public string Name;
-        public string Address;
-        protected int phone;
-        
-        public int Phone
-        {
-            set { phone = value; }
-        }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public int Phone { get; set; }
     }
     
     class Student : Member
     {
-        static public int Count = 0;
+        static public int Count { get; set; } = 0;
         
         
-        public int Grade;
-        public string Birthday;
-        public School School;
+        public int Grade { get; set; }
+        public string Birthday { get; set; }
+        public School School { get; set; }
         
 
         public Student()
