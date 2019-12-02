@@ -62,6 +62,8 @@ namespace StudentManager
                 
             }
 
+            ShowGrade("Tom");
+            
             foreach (var student in students)
             {
                 Console.WriteLine("Name: {0}, Grade: {1}", student.Name, student.Grade);
@@ -92,6 +94,12 @@ namespace StudentManager
                         break;
                 }
             }
+        }
+
+        static void ShowGrade(string name)
+        {
+            var found = students.Find(student =>  student.Name == name);
+            Console.WriteLine("{0}'s Grade: {1}", found.Name, found.Grade);
         }
     }
 

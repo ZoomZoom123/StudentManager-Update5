@@ -2,6 +2,14 @@ using System;
 
 namespace Util
 {
+    public static class ExtensionMethods
+    {
+        public static int toInt(this string value)
+        {
+            return int.Parse(value);
+        }
+    }
+    
     public class Console
     {
         static public string Ask(string question)
@@ -21,7 +29,7 @@ namespace Util
             try
             {
                 System.Console.Write(question);
-                return int.Parse(System.Console.ReadLine());
+                return System.Console.ReadLine().toInt();
             }
             catch (Exception)
             {
