@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.ConstrainedExecution;
 
 namespace StudentManager
 {
     class Program
     {
-        /* Import students from old spreadsheets
-         */
         static void Main(string[] args)
         {
             var students = new List<Student>();
@@ -53,15 +50,26 @@ namespace StudentManager
         }
     }
 
-    class Student
+    class Member
+    {
+        public string Name;
+        public string Address;
+        protected int phone;
+        
+        public int Phone
+        {
+            set { phone = value; }
+        }
+    }
+    
+    class Student : Member
     {
         static public int Count = 0;
         
-        public string Name;
+        
         public int Grade;
         public string Birthday;
-        public string Address;
-        private int phone;
+        
 
         public Student()
         {
@@ -76,15 +84,11 @@ namespace StudentManager
             Address = address;
             Phone = phone;
         }
+    }
 
-        public int Phone
-        {
-            set { phone = value; }
-        }
-        
-        public void SetPhone(int number)
-        {
-            phone = number;
-        }
+    class Teacher : Member
+    {
+        public string Subject;
+       
     }
 }
