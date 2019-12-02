@@ -17,6 +17,9 @@ namespace StudentManager
         
         static void Main(string[] args)
         {
+            PayRoll payRoll = new PayRoll();
+            payRoll.PayAll();
+            
             var adding = true;
             
             while (adding)
@@ -92,7 +95,7 @@ namespace StudentManager
         }
     }
 
-    class Member
+    public class Member
     {
         public string Name;
         public string Address;
@@ -127,11 +130,5 @@ namespace StudentManager
             Address = address;
             Phone = phone;
         }
-    }
-
-    class Teacher : Member
-    {
-        public string Subject;
-       
     }
 }
