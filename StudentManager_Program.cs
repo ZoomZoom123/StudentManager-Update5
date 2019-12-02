@@ -3,12 +3,20 @@ using System.Collections.Generic;
 
 namespace StudentManager
 {
+    enum School
+    {
+        HsOne,
+        HsTwo,
+        HsThree
+        
+    }
+    
     class Program
     {
+        static  List<Student>students = new List<Student>();
+        
         static void Main(string[] args)
         {
-            var students = new List<Student>();
-
             var adding = true;
             
             while (adding)
@@ -21,6 +29,8 @@ namespace StudentManager
 
                     newStudent.Grade = Util.Console.AskInt("Student Grade: ");
 
+                    newStudent.School = (School)Util.Console.AskInt("School Name: (type the corresponding number): \n 0: HS One \n 1: HS Two \n 2: HS Three \n");
+
                     newStudent.Birthday = Util.Console.Ask("Student Birthday: ");
 
                     newStudent.Address = Util.Console.Ask("Student Address: ");
@@ -31,7 +41,7 @@ namespace StudentManager
                     Student.Count++;
                     Console.WriteLine("Student Count: {0}", Student.Count);
 
-                    Util.Console.Ask("Add another? y/n");
+                    Util.Console.Ask("Add another? y/n \n");
 
                     if (Console.ReadLine() != "y")
                     {
@@ -53,12 +63,32 @@ namespace StudentManager
             {
                 Console.WriteLine("Name: {0}, Grade: {1}", student.Name, student.Grade);
             }
+            Exports();
         }
 
         static void Import()
         {
             var importedStudent = new Student("Jenny", 86, "birthday", "address", 123456);
             Console.WriteLine(importedStudent.Name);
+        }
+
+        static void Exports()
+        {
+            foreach (var student in students)
+            {
+                switch (student.School)
+                {
+                    case School.HsOne:
+                        Console.WriteLine("Exporting to HS One");
+                        break;
+                    case School.HsTwo:
+                        Console.WriteLine("Exporting to HS Two");
+                        break;
+                    case School.HsThree:
+                        Console.WriteLine("Exporting to HS Three");
+                        break;
+                }
+            }
         }
     }
 
@@ -81,6 +111,7 @@ namespace StudentManager
         
         public int Grade;
         public string Birthday;
+        public School School;
         
 
         public Student()
