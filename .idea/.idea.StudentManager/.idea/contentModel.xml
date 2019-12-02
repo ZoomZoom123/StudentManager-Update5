@@ -19,7 +19,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="StudentManager.csproj" t="IncludeRecursive" />
       <e p="StudentManager.sln" t="IncludeFlat" />
-      <e p="StudentManager_Update5_Program.cs" t="Include" />
+      <e p="StudentManager_Program.cs" t="Include" />
     </e>
   </component>
 </project>

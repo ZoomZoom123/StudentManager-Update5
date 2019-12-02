@@ -17,7 +17,12 @@ namespace StudentManager
                 
                 newStudent.Name = Util.Console.Ask("Student Name: ");
                 
-                newStudent.Grade = int.Parse(Util.Console.Ask("Student Grade: "));
+                var result = int.TryParse(Util.Console.Ask("Student Grade: "), out newStudent.Grade);
+
+                if (!result == false)
+                {
+                    Console.WriteLine("Error, please enter a number.");
+                }
                 
                 newStudent.Birthday = Util.Console.Ask("Student Birthday: ");
                 
