@@ -19,13 +19,13 @@ namespace StudentManager
 
                     newStudent.Name = Util.Console.Ask("Student Name: ");
 
-                    newStudent.Grade = int.Parse(Util.Console.Ask("Student Grade: "));
+                    newStudent.Grade = Util.Console.AskInt("Student Grade: ");
 
                     newStudent.Birthday = Util.Console.Ask("Student Birthday: ");
 
                     newStudent.Address = Util.Console.Ask("Student Address: ");
 
-                    newStudent.Phone = int.Parse(Util.Console.Ask("Student Phone Number: "));
+                    newStudent.Phone = Util.Console.AskInt("Student Phone Number: ");
 
                     students.Add(newStudent);
                     Student.Count++;
@@ -38,9 +38,9 @@ namespace StudentManager
                         adding = false;
                     }
                 }
-                catch (FormatException)
+                catch (FormatException msg)
                 {
-                    Console.WriteLine("Input was not a number.");
+                    Console.WriteLine(msg.Message);
                 }
                 catch (Exception)
                 {
