@@ -9,6 +9,7 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
       <e p="Console.cs" t="Include" />
+      <e p="Logger.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive">
         <e p="Debug" t="Include">
           <e p="netcoreapp2.1" t="Include">
@@ -19,9 +20,9 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Payroll.cs" t="Include" />
       <e p="Principal.cs" t="Include" />
+      <e p="Program.cs" t="Include" />
       <e p="StudentManager.csproj" t="IncludeRecursive" />
       <e p="StudentManager.sln" t="IncludeFlat" />
-      <e p="StudentManager_Program.cs" t="Include" />
       <e p="Teacher.cs" t="Include" />
     </e>
   </component>

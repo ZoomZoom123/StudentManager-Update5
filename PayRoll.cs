@@ -19,6 +19,8 @@ namespace StudentManager
             payees.Add(new Teacher());
             payees.Add(new Teacher());
             payees.Add(new Principal());
+            
+            Logger.Log("PayRoll started", "Payroll");
         }
         
         public void PayAll()
@@ -27,6 +29,7 @@ namespace StudentManager
             {
                 payee.Pay();
             }
+            Logger.Log("PayAll completed", "PayRoll", 2);
         }
     }
 }
