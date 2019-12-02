@@ -1,0 +1,11 @@
+/Users/mismith/RiderProjects/StudentManager/bin/Debug/netcoreapp2.1/StudentManager.deps.json
+/Users/mismith/RiderProjects/StudentManager/bin/Debug/netcoreapp2.1/StudentManager.runtimeconfig.json
+/Users/mismith/RiderProjects/StudentManager/bin/Debug/netcoreapp2.1/StudentManager.runtimeconfig.dev.json
+/Users/mismith/RiderProjects/StudentManager/bin/Debug/netcoreapp2.1/StudentManager.dll
+/Users/mismith/RiderProjects/StudentManager/bin/Debug/netcoreapp2.1/StudentManager.pdb
+/Users/mismith/RiderProjects/StudentManager/obj/Debug/netcoreapp2.1/StudentManager.csprojAssemblyReference.cache
+/Users/mismith/RiderProjects/StudentManager/obj/Debug/netcoreapp2.1/StudentManager.csproj.CoreCompileInputs.cache
+/Users/mismith/RiderProjects/StudentManager/obj/Debug/netcoreapp2.1/StudentManager.AssemblyInfoInputs.cache
+/Users/mismith/RiderProjects/StudentManager/obj/Debug/netcoreapp2.1/StudentManager.AssemblyInfo.cs
+/Users/mismith/RiderProjects/StudentManager/obj/Debug/netcoreapp2.1/StudentManager.dll
+/Users/mismith/RiderProjects/StudentManager/obj/Debug/netcoreapp2.1/StudentManager.pdb
