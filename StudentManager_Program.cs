@@ -13,33 +13,40 @@ namespace StudentManager
             
             while (adding)
             {
-                var newStudent = new Student();
-                
-                newStudent.Name = Util.Console.Ask("Student Name: ");
-                
-                var result = int.TryParse(Util.Console.Ask("Student Grade: "), out newStudent.Grade);
-
-                if (!result == false)
+                try
                 {
-                    Console.WriteLine("Error, please enter a number.");
+                    var newStudent = new Student();
+
+                    newStudent.Name = Util.Console.Ask("Student Name: ");
+
+                    newStudent.Grade = int.Parse(Util.Console.Ask("Student Grade: "));
+
+                    newStudent.Birthday = Util.Console.Ask("Student Birthday: ");
+
+                    newStudent.Address = Util.Console.Ask("Student Address: ");
+
+                    newStudent.Phone = int.Parse(Util.Console.Ask("Student Phone Number: "));
+
+                    students.Add(newStudent);
+                    Student.Count++;
+                    Console.WriteLine("Student Count: {0}", Student.Count);
+
+                    Util.Console.Ask("Add another? y/n");
+
+                    if (Console.ReadLine() != "y")
+                    {
+                        adding = false;
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Input was not a number.");
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Error adding student, Please try again.");
                 }
                 
-                newStudent.Birthday = Util.Console.Ask("Student Birthday: ");
-                
-                newStudent.Address = Util.Console.Ask("Student Address: ");
-                
-                newStudent.Phone = int.Parse(Util.Console.Ask("Student Phone Number: "));
-                
-                students.Add(newStudent);
-                Student.Count++;
-                Console.WriteLine("Student Count: {0}", Student.Count);
-                
-                Util.Console.Ask("Add another? y/n");
-
-                if (Console.ReadLine() != "y")
-                {
-                    adding = false;
-                }
             }
 
             foreach (var student in students)
