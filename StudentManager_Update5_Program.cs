@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 
 namespace StudentManager
 {
@@ -44,8 +45,12 @@ namespace StudentManager
                 Console.WriteLine("Name: {0}, Grade: {1}", student.Name, student.Grade);
             }
         }
-        
-        
+
+        static void Import()
+        {
+            var importedStudent = new Student("Jenny", 86, "birthday", "address", 123456);
+            Console.WriteLine(importedStudent.Name);
+        }
     }
 
     class Student
@@ -57,6 +62,20 @@ namespace StudentManager
         public string Birthday;
         public string Address;
         private int phone;
+
+        public Student()
+        {
+            
+        }
+
+        public Student(string name, int grade, string birthday, string address, int phone)
+        {
+            Name = name;
+            Grade = grade;
+            Birthday = birthday;
+            Address = address;
+            Phone = phone;
+        }
 
         public int Phone
         {
